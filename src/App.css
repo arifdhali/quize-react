@@ -21,7 +21,7 @@ h2 {
 
 .quize-container {
   width: 500px;
-  
+
 }
 
 li {
@@ -29,6 +29,13 @@ li {
 
 }
 
+.quize-status-line {
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
 
 .quize-answer-list li:not(:last-child) {
   margin-bottom: 1rem;
