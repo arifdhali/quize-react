@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React from "react";
+import "./App.css";
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <div className="quize-container bg-white mx-auto rounded  p-8 shadow-md">
+          <div className="quize-header flex items-center justify-between	 ">
+            <div>
+              <p className="mb-1">Question 1/ 5</p>
+              <div className="quize-status h-5  border-rose-700 border-2 ">
+                <div className="quize-status-line bg-red-400 w-5 h-4"></div>
+              </div>
+            </div>
+            <div className="quize-score">
+              <p>Score</p>
+              <h2 className="text-red-700">0</h2>
+            </div>
+          </div>
+          <div className="quize-body mt-8 text-left">
+            <div className="quize-question">
+              <h1 className="text-xl font-semibold ">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Eveniet, odit.
+              </h1>
+            </div>
+            <ul className="quize-answer-list pt-8 ">
+              <li className=" flex items-center  cursor-pointer shadow-md hover:bg-green-100">
+                <div className="counter py-2 px-5 bg-rose-400 mr-4 text-white ">
+                  1
+                </div>
+                <p>Lorem ipsum dolor sit.</p>
+              </li>
+              <li className=" flex items-center  cursor-pointer shadow-md hover:bg-green-100">
+                <div className="counter py-2 px-5 bg-rose-400 mr-4 text-white ">
+                  1
+                </div>
+                <p>Lorem ipsum dolor sit.</p>
+              </li>
+              <li className=" flex items-center  cursor-pointer shadow-md hover:bg-green-100">
+                <div className="counter py-2 px-5 bg-rose-400 mr-4 text-white ">
+                  1
+                </div>
+                <p>Lorem ipsum dolor sit.</p>
+              </li>
+              <li className=" flex items-center  cursor-pointer shadow-md hover:bg-green-100">
+                <div className="counter py-2 px-5 bg-rose-400 mr-4 text-white ">
+                  1
+                </div>
+                <p>Lorem ipsum dolor sit.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
